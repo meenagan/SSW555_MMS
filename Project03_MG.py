@@ -47,5 +47,3 @@ if __name__ == "__main__":
 				fams_set = {'NA'}
 			ind_dict[unique_id].extend((name,sex,birth_date,age,alive_flag,death_date,famc_set,fams_set))	
 	ind_dict_sorted = OrderedDict(sorted(ind_dict.items(),key = lambda s: int(s[0][1:])))
-
-
