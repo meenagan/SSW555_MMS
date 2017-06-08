@@ -56,3 +56,39 @@ df=pd.DataFrame.from_dict(ind_dict_sorted, orient="index")
 df.columns=["Name","Gender","Birthday","Age","Alive","Death","Child","Spouse"]
 df.index.name="ID"
 print tabulate(df, headers='keys', tablefmt='fancy_grid')
+
+for fam_id,ind_line in enumerate(data_list):
+    if 'FAM' in ind_line[-3:]:
+        unique_id = ind_line.split(" ")[1][1:-1]
+        fam_dict[unique_id] = []
+        j = fam_id
+        child_set = set()
+    	marr_date ='NA'
+    	div_date = 'NA'
+    	husb_id = 'NA'
+    	husb_name = 'NA'
+    	wife_id = 'NA'
+    	while True:
+            j = j + 1
+            if (j >= numrows) or ('FAM' in data_list[j]):
+                break
+            if 'HUSB' in data_list[j]:
+                husb_id = data_list[j].partition("HUSB ")[2]
+            if 'WIFE' in data_list[j]:
+                wife_id = data_list[j].partition("WIFE ")[2]
+            if 'CHIL' in data_list[j]:
+                child_set.add(data_list[j].partition("CHIL ")[2][1:-1])
+            if 'MARR' in data_list[j]:
+                div_date='NA'
+                marr_date = data_list[j+1].partition("DATE ")[2]
+            if 'DIV' in data_list[j]:
+                div_date = data_list[j+1].partition("DATE ")[2]	
+        if len(child_set) == 0:
+            child_set = {'NA'}
+        if husb_id != 'NA':
+            husb_name = ind_dict[husb_id[1:-1]][0]
+        if wife_id != 'NA':
+            wife_name = ind_dict[wife_id[1:-1]][0]
+
+        fam_dict[unique_id].extend((marr_date,div_date,husb_id,husb_name,wife_id,wife_name,child_set))	
+dict_fam_sorted = OrderedDict(sorted(fam_dict.items(),key = lambda s: int(s[0][1:])))
