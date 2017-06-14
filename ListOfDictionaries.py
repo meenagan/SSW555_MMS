@@ -3,7 +3,7 @@ from datetime import datetime
 from collections import OrderedDict
 from isDivorceAfterMarriage import isDivorceAfterMarriage
 
-#adding this to git
+#adding this to git repository
 if __name__ == "__main__":
     filename = 'My-Family-25-May-2017-601.txt'
     with open(filename,encoding="utf8") as f:
