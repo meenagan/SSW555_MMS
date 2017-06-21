@@ -3,7 +3,6 @@ from datetime import datetime
 from collections import OrderedDict
 from tabulate import tabulate  # added
 import pandas as pd  # added
-from UserStory02 import isMarriageBeforeBirth
 
 if __name__ == "__main__":
 
@@ -99,24 +98,3 @@ df_fam = pd.DataFrame.from_dict(dict_fam_sorted, orient="index")
 df_fam.columns = ["Married", "Divorced", "Husband ID", "Husband Name", "Wife ID", "Wife Name", "Children"]
 df_fam.index.name = "ID"
 print(tabulate(df_fam, headers='keys', tablefmt='fancy_grid'))
-
-
-#Code for User-Story-02
-def marriagebeforebirth(fam_dict,ind_dict):    
-    fam_dict_marriagebeforebirth = {}
-    for fam in fam_dict:
-        if fam_dict[fam][0] == 'NA':
-            fam_dict_marriagebeforebirth[fam] = 'single ready to mingle'
-        else:
-            marriagedate = fam_dict[fam][0]
-            husbid = fam_dict[fam][2][1:-1]
-            wifeid = fam_dict[fam][4][1:-1]
-            husbbirthdate = ind_dict[husbid][2]
-            wifebirthdate = ind_dict[wifeid][2]
-            if isMarriageBeforeBirth(husbbirthdate,marriagedate) and isMarriageBeforeBirth(wifebirthdate,marriagedate):
-                fam_dict_marriagebeforebirth[fam] = 'birthdate before marriage'
-            else:
-                fam_dict_marriagebeforebirth[fam] = 'birthdate not before marriage'
-    return fam_dict_marriagebeforebirth
-
-marriagebeforebirth(fam_dict,ind_dict)
