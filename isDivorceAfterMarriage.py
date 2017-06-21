@@ -21,9 +21,7 @@ def isDivorceAfterMarriage(data_list):
                     death_date_datetime = datetime.strptime(death_date, date_format)
                     if birth_date != 'NA':
                         if int((death_date_datetime - birth_date_datetime).days) > 54750:  # if death is after 150 years of birth
-                            print("ERROR: INDIVIDUAL: US07 : 14: ", unique_id,
-                                  ": More than 150 years old at death - Birth ", birth_date, ": Death ", death_date)
-
+                            print("ERROR: INDIVIDUAL: US07 : 14: ", unique_id,": More than 150 years old at death - Birth ", birth_date, ": Death ", death_date)
     for fam_id, ind_line in enumerate(data_list):
         if 'FAM' in ind_line[-3:]:
             j = fam_id
@@ -46,7 +44,5 @@ def isDivorceAfterMarriage(data_list):
                     div_date = data_list[j + 1].partition("DATE ")[2]
             if div_date != 'NA' and marr_date != 'NA':
                 if div_date < marr_date:
-                    print("ERROR: FAMILY: US04 : 14: ", husb_id, ": Divorced ", div_date,
-                          " before married on ", marr_date)
-                    print("ERROR: FAMILY: US04 : 14: ", wife_id, ": Divorced ", div_date,
-                          " before married on ", marr_date)
+                    print("ERROR: FAMILY: US04 : 14: ", husb_id, ": Divorced ", div_date," before married on ", marr_date)
+                    print("ERROR: FAMILY: US04 : 14: ", wife_id, ": Divorced ", div_date," before married on ", marr_date)
