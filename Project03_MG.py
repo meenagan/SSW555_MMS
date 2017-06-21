@@ -57,6 +57,8 @@ df.columns=["Name","Gender","Birthday","Age","Alive","Death","Child","Spouse"]
 df.index.name="ID"
 print tabulate(df, headers='keys', tablefmt='fancy_grid')
 
+fam_dict={}
+
 for fam_id,ind_line in enumerate(data_list):
     if 'FAM' in ind_line[-3:]:
         unique_id = ind_line.split(" ")[1][1:-1]
@@ -92,3 +94,8 @@ for fam_id,ind_line in enumerate(data_list):
 
         fam_dict[unique_id].extend((marr_date,div_date,husb_id,husb_name,wife_id,wife_name,child_set))	
 dict_fam_sorted = OrderedDict(sorted(fam_dict.items(),key = lambda s: int(s[0][1:])))
+
+df_fam=pd.DataFrame.from_dict(dict_fam_sorted, orient="index")
+df_fam.columns=["Married","Divorced","Husband ID","Husband Name","Wife ID", "Wife Name","Children"]
+df_fam.index.name="ID"
+print tabulate(df_fam, headers='keys', tablefmt='fancy_grid')
