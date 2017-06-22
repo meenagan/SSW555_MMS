@@ -23,7 +23,7 @@ class TestCheckDate(unittest.TestCase):
     def testcheckdate(self):
     	self.assertFalse(checkdatebeforecurrentdate("09 SEP 5054"))
 
-#Code for User Story01:
+#Code for User Story:
 
 def datebeforecurrent(fam_dict,ind_dict):    
     datebeforecurrent = {}
