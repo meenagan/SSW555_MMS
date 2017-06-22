@@ -106,4 +106,5 @@ Marriage_before_HusbDeath(fam_dict)
 Marriage_before_WifeDeath(fam_dict)
 Divorce_before_HusbDeath(fam_dict)
 Divorce_before_WifeDeath(fam_dict)
-
+marriagebeforebirth(fam_dict,ind_dict)
+checkdatebeforecurrentdate(inputdate)
