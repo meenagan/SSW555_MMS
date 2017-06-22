@@ -5,6 +5,7 @@ from tabulate import tabulate  # added
 import pandas as pd  # added
 from sonali_sprint1 import isDivorceAfterMarriage
 from Matt_sprint1 import Marriage_before_HusbDeath,Marriage_before_WifeDeath,Divorce_before_HusbDeath,Divorce_before_WifeDeath
+from Meena_sprint2 import isMarriageBeforeBirth, checkdatebeforecurrentdate
 
 
 if __name__ == "__main__":
