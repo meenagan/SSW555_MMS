@@ -3,6 +3,9 @@ from datetime import datetime
 from collections import OrderedDict
 from tabulate import tabulate  # added
 import pandas as pd  # added
+from sonali_sprint1 import isDivorceAfterMarriage
+from Matt_sprint1 import Marriage_before_HusbDeath,Marriage_before_WifeDeath,Divorce_before_HusbDeath,Divorce_before_WifeDeath
+
 
 if __name__ == "__main__":
 
@@ -50,7 +53,7 @@ if __name__ == "__main__":
             ind_dict[unique_id].extend((name, sex, birth_date, age, alive_flag, death_date, famc_set, fams_set))
     ind_dict_sorted = OrderedDict(sorted(ind_dict.items(), key=lambda s: int(s[0][1:])))
 
-# added
+#added
 df = pd.DataFrame.from_dict(ind_dict_sorted, orient="index")
 df.columns = ["Name", "Gender", "Birthday", "Age", "Alive", "Death", "Child", "Spouse"]
 df.index.name = "ID"
@@ -98,3 +101,9 @@ df_fam = pd.DataFrame.from_dict(dict_fam_sorted, orient="index")
 df_fam.columns = ["Married", "Divorced", "Husband ID", "Husband Name", "Wife ID", "Wife Name", "Children"]
 df_fam.index.name = "ID"
 print(tabulate(df_fam, headers='keys', tablefmt='fancy_grid'))
+isDivorceAfterMarriage(data_list)
+Marriage_before_HusbDeath(fam_dict)
+Marriage_before_WifeDeath(fam_dict)
+Divorce_before_HusbDeath(fam_dict)
+Divorce_before_WifeDeath(fam_dict)
+
