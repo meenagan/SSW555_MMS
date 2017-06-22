@@ -3,7 +3,9 @@ from datetime import datetime
 from collections import OrderedDict
 from tabulate import tabulate  # added
 import pandas as pd  # added
+from UserStory01 import datebeforecurrent
 from UserStory02 import isMarriageBeforeBirth
+
 
 if __name__ == "__main__":
 
@@ -100,6 +102,8 @@ df_fam.columns = ["Married", "Divorced", "Husband ID", "Husband Name", "Wife ID"
 df_fam.index.name = "ID"
 print(tabulate(df_fam, headers='keys', tablefmt='fancy_grid'))
 
+#Code for User-Story-01
+
 
 #Code for User-Story-02
 def marriagebeforebirth(fam_dict,ind_dict):    
@@ -120,3 +124,4 @@ def marriagebeforebirth(fam_dict,ind_dict):
     return fam_dict_marriagebeforebirth
 
 marriagebeforebirth(fam_dict,ind_dict)
+datebeforecurrent(fam_dict,ind_dict)
