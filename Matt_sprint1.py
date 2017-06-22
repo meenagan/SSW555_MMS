@@ -1,5 +1,9 @@
+from __future__ import division
+from datetime import datetime
 
-def Marriage_before_HusbDeath(fam_dict):
+date_format = "%d %b %Y"
+
+def Marriage_before_HusbDeath(fam_dict,ind_dict):
     for key, value in fam_dict.items():
 
         marr_date = value[0]
@@ -21,7 +25,7 @@ def Marriage_before_HusbDeath(fam_dict):
             print "Error: US 05: Death date (", husb_deathdate_datetime, ") of husband", husb_id, "before marriage date (", marr_date, ")" "\n"
             return True
             
-def Marriage_before_WifeDeath():
+def Marriage_before_WifeDeath(fam_dict,ind_dict):
     for key, value in fam_dict.items():
 
         marr_date = value[0]
@@ -43,7 +47,7 @@ def Marriage_before_WifeDeath():
             print "Error: US 05: Death date (" , wife_deathdate_datetime, ") of wife,", wife_id, "before marriage date (", marr_date, ")" "\n"
             return True
                
-def Divorce_before_HusbDeath():
+def Divorce_before_HusbDeath(fam_dict,ind_dict):
     for key, value in fam_dict.items():
        
         div_date = value[1]   
@@ -65,7 +69,7 @@ def Divorce_before_HusbDeath():
             print "Error: US 06: Death date (" , husb_deathdate_datetime, ")of husband", husb_id, "before divorce date (", div_date, ")" "\n"
             return True
     
-def Divorce_before_WifeDeath():
+def Divorce_before_WifeDeath(fam_dict,ind_dict):
     for key, value in fam_dict.items():
        
         div_date = value[1]   

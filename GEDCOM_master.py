@@ -5,7 +5,7 @@ from tabulate import tabulate  # added
 import pandas as pd  # added
 from sonali_sprint1 import isDivorceAfterMarriage
 from Matt_sprint1 import Marriage_before_HusbDeath,Marriage_before_WifeDeath,Divorce_before_HusbDeath,Divorce_before_WifeDeath
-from Meena_sprint2 import isMarriageBeforeBirth, datebeforecurrent
+from Meena_sprint2 import marriagebeforebirth, datebeforecurrent
 
 
 if __name__ == "__main__":
@@ -103,9 +103,9 @@ df_fam.columns = ["Married", "Divorced", "Husband ID", "Husband Name", "Wife ID"
 df_fam.index.name = "ID"
 print(tabulate(df_fam, headers='keys', tablefmt='fancy_grid'))
 isDivorceAfterMarriage(data_list)
-Marriage_before_HusbDeath(fam_dict)
-Marriage_before_WifeDeath(fam_dict)
-Divorce_before_HusbDeath(fam_dict)
-Divorce_before_WifeDeath(fam_dict)
+Marriage_before_HusbDeath(fam_dict,ind_dict)
+Marriage_before_WifeDeath(fam_dict,ind_dict)
+Divorce_before_HusbDeath(fam_dict,ind_dict)
+Divorce_before_WifeDeath(fam_dict,ind_dict)
 marriagebeforebirth(fam_dict,ind_dict)
 datebeforecurrent(fam_dict,ind_dict)

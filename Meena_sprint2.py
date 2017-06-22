@@ -27,22 +27,24 @@ def isMarriageBeforeBirth(birthdate, marriagedate):
     return birthdate < marriagedate
 
 
-def datebeforecurrent(fam_dict,ind_dict):    
-    datebeforecurrent = {}
-    for date in fam_dict:
-        if fam_dict[date][0] == 'NA':
-            datebeforecurrent[date] = 'NA'
-        else:
-        inputdate = fam_dict[date]
-        if checkdatebeforecurrnentdate(inputdate) = True:
-                    datebeforecurrent[date] = 'Date is Valid'
-            else:
-                    datebeforecurrent[date] = 'Error: Date occurs After Current Date'
-return datebeforecurrent
-
 def checkdatebeforecurrentdate(inputdate):
     date_format = "%d %b %Y"
     presentdatestring = datetime.date.today().strftime(date_format)
     presentdate = time.strptime(presentdatestring, date_format)
     inputdate = time.strptime(inputdate, date_format)
     return inputdate < presentdate
+
+def datebeforecurrent(fam_dict,ind_dict):    
+    datebeforecurrent = {}
+    for fam in fam_dict:
+        if fam_dict[fam][0] == 'NA':
+            datebeforecurrent[fam] = 'NA'
+        else:
+            inputdate = fam_dict[fam][0]
+        if checkdatebeforecurrentdate(inputdate) == True:
+            datebeforecurrent[fam] = 'Date is Valid'
+        else:
+            datebeforecurrent[fam] = 'Error: Date occurs After Current Date'
+    return datebeforecurrent
+
+
