@@ -60,16 +60,16 @@
 +------+-------------+-------------+--------------+------------------+-----------+-------------------+-------------------------------¦
 ¦ F8   ¦ 4 MAR 1977  ¦ NA          ¦ @I17@        ¦ Kautik /Patil/   ¦ @I16@     ¦ Rambha /Patil/    ¦ set(['I19'])                  ¦
 +------------------------------------------------------------------------------------------------------------------------------------+
-('ERROR: INDIVIDUAL: US07 : ', 'I4', ': More than 150 years old - Birth ', '4 JUN 1083')
-('ERROR: INDIVIDUAL: US07 : ', 'I12', ': More than 150 years old at death - Birth ', '6 SEP 1930', ': Death ', '10 JUN 2120')
-('ERROR: FAMILY: US04 : ', 'I18', ': Divorced ', '15 JUN 2100', ' before married on ', '9 JUN 1982')
-('ERROR: FAMILY: US04 : ', 'I16', ': Divorced ', '15 JUN 2100', ' before married on ', '9 JUN 1982')
-Error: US 05: Death date ( 2017-06-22 21:34:45.107000 ) of husband I8 before marriage date ( 28 JUN 2100 )
+ERROR: INDIVIDUAL: US07 :  I4 : More than 150 years old - Birth  4 JUN 1083
+ERROR: INDIVIDUAL: US07 :  I12 : More than 150 years old at death - Birth  6 SEP 1930 : Death  10 JUN 2120
+ERROR: FAMILY: US04 :  I18 : Divorced  15 JUN 2100  before married on  9 JUN 1982
+ERROR: FAMILY: US04 :  I16 : Divorced  15 JUN 2100  before married on  9 JUN 1982
+Error: US 05: Death date ( 2017-06-22 21:59:05.280000 ) of husband I8 before marriage date ( 28 JUN 2100 )
 
-Error: US 05: Death date ( 2017-06-22 21:34:45.107000 ) of wife, I4 before marriage date ( 28 JUN 2100 )
+Error: US 05: Death date ( 2017-06-22 21:59:05.280000 ) of wife, I4 before marriage date ( 28 JUN 2100 )
 
-Error: US 06: Death date ( 2017-06-22 21:34:45.107000 )of husband I18 before divorce date ( 15 JUN 2100 )
+Error: US 06: Death date ( 2017-06-22 21:59:05.280000 )of husband I18 before divorce date ( 15 JUN 2100 )
 
-Error: US 06: Death date ( 2017-06-22 21:34:45.107000 ) of wife I16 before divorce date ( 15 JUN 2100 )
+Error: US 06: Death date ( 2017-06-22 21:59:05.280000 ) of wife I16 before divorce date ( 15 JUN 2100 )
 
-('ERROR: FAMILY: US01 :', '28 JUN 2100', ': occurs in the future')
+ERROR: FAMILY: US01 : 28 JUN 2100 : occurs in the future
