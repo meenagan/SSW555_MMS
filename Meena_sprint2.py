@@ -13,11 +13,10 @@ def marriagebeforebirth(fam_dict,ind_dict):
             wifeid = fam_dict[fam][4][1:-1]
             husbbirthdate = ind_dict[husbid][2]
             wifebirthdate = ind_dict[wifeid][2]
-            if isMarriageBeforeBirth(husbbirthdate,marriagedate) and isMarriageBeforeBirth(wifebirthdate,marriagedate):
-                fam_dict_marriagebeforebirth[fam] = 'birthdate before marriage'
-            else:
-                fam_dict_marriagebeforebirth[fam] = 'birthdate not before marriage'
-    return fam_dict_marriagebeforebirth
+            if not isMarriageBeforeBirth(husbbirthdate,marriagedate):
+                print("ERROR: FAMILY: US02 :",husbid," Husband's birth date ", husbbirthdate, ": after marriage date ",marriagedate)
+            if  not isMarriageBeforeBirth(wifebirthdate,marriagedate):
+                print("ERROR: FAMILY: US02 :", wifeid, " Wife's birth date ", wifebirthdate,": after marriage date ", marriagedate)
 
 
 def isMarriageBeforeBirth(birthdate, marriagedate):
@@ -44,7 +43,6 @@ def datebeforecurrent(fam_dict,ind_dict):
         if checkdatebeforecurrentdate(inputdate) == True:
             datebeforecurrent[fam] = 'Date is Valid'
         else:
-            datebeforecurrent[fam] = 'Error: Date occurs After Current Date'
-    return datebeforecurrent
+            print("ERROR: FAMILY: US01 :",inputdate, ": occurs in the future")
 
 
