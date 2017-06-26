@@ -109,4 +109,3 @@ Divorce_before_HusbDeath(fam_dict,ind_dict)
 Divorce_before_WifeDeath(fam_dict,ind_dict)
 marriagebeforebirth(fam_dict,ind_dict)
 datebeforecurrent(fam_dict,ind_dict)
-
