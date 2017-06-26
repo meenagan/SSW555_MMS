@@ -3,9 +3,12 @@ from datetime import datetime
 from collections import OrderedDict
 from tabulate import tabulate  # added
 import pandas as pd  # added
+<<<<<<< HEAD
 from UserStory01 import datebeforecurrent
 from UserStory02 import isMarriageBeforeBirth
 
+=======
+>>>>>>> master
 
 if __name__ == "__main__":
 
@@ -100,6 +103,7 @@ dict_fam_sorted = OrderedDict(sorted(fam_dict.items(), key=lambda s: int(s[0][1:
 df_fam = pd.DataFrame.from_dict(dict_fam_sorted, orient="index")
 df_fam.columns = ["Married", "Divorced", "Husband ID", "Husband Name", "Wife ID", "Wife Name", "Children"]
 df_fam.index.name = "ID"
+<<<<<<< HEAD
 print(tabulate(df_fam, headers='keys', tablefmt='fancy_grid'))
 
 #Code for User-Story-01
@@ -125,3 +129,6 @@ def marriagebeforebirth(fam_dict,ind_dict):
 
 marriagebeforebirth(fam_dict,ind_dict)
 
+=======
+print(tabulate(df_fam, headers='keys', tablefmt='fancy_grid'))
+>>>>>>> master
