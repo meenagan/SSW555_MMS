@@ -17,6 +17,7 @@ def isbirthbeforedeath(ind_dict):
             if compareTwoDates(birthdate, deathdate) == True:
                 birthbeforedeath[ind] = 'Bithdate and Deathdate are valid.'
             else:
+                print 'Error: US 03: Birthdate and Deathdate for {} are not valid. Please check the dates.'.format(ind)
                 birthbeforedeath[ind] = 'Birthdate and Deathdate are not valid. Please check the dates.'
     return birthbeforedeath
 
@@ -35,9 +36,11 @@ def isGenderCorrectForRole(ind_dict, fam_dict):
             if husb_gender == 'M':
                 GenderForRole[fam].append('Husband Gender is valid.')
             else:
+                print 'Error: US 21: Husband Gender for {} in family {} is invalid.'.format(temp_husb_id,fam)
                 GenderForRole[fam].append('Husband Gender is Invalid.')
             if wife_gender == 'F':
                 GenderForRole[fam].append('Wife Gender is Valid.')
             else:
+                print 'Error: US 21: Wife Gender for {} in family {} is invalid.'.format(temp_wife_id,fam)
                 GenderForRole[fam].append("Wife Gender is Invalid.")
     return GenderForRole
