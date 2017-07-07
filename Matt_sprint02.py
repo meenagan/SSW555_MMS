@@ -10,6 +10,8 @@ def US12_US14(fam_dict,ind_dict):
         
         husb_id = value[2][1:-1]
         husb_value = ind_dict.get(husb_id)
+        if husb_value is None:
+            continue
         husb_deathdate = husb_value[5]
         husb_birthdate = husb_value[2]
         husb_birthdate_datetime = datetime.strptime(husb_birthdate, date_format)
@@ -24,6 +26,8 @@ def US12_US14(fam_dict,ind_dict):
         
         wife_id = value[4][1:-1]
         wife_value = ind_dict.get(wife_id)
+        if wife_value is None:
+            continue
         wife_deathdate = wife_value[5]
         wife_birthdate = wife_value[2]
         wife_birthdate_datetime = datetime.strptime(wife_birthdate, date_format)
@@ -32,14 +36,16 @@ def US12_US14(fam_dict,ind_dict):
             wife_deathdate_datetime = datetime.strptime(wife_deathdate, date_format)
         elif wife_deathdate == 'NA':
             wife_deathdate_datetime = datetime.now()
-            
+        
         wife_age = int((wife_deathdate_datetime - wife_birthdate_datetime).days/365)
         
         # Create list for USER STORY 15
         child_birthdate_list=[]
         children_id=value[6]
         for child in children_id:
-            child_value=ind_dict.get(child)                
+            child_value=ind_dict.get(child) 
+            if child_value is None:
+                continue
             child_deathdate=child_value[5]
             child_birthdate=child_value[2]
             
@@ -72,6 +78,6 @@ def US12_US14(fam_dict,ind_dict):
         child_birthdate_common_dict = dict(child_birthdate_common)
        
         if any(value > 5 for value in child_birthdate_common_dict.itervalues()):
-            print "Error: US 14: More than five children born on the same date: ", child_birthdate
+            print "Error: US 14: More than five children (", children_id, ") born on the same date:", child_birthdate
         
-        return True
+    return True
