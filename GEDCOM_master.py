@@ -5,6 +5,7 @@ from tabulate import tabulate  # added
 import pandas as pd  # added
 from sonali_sprint1 import isDivorceAfterMarriage
 from Matt_sprint1 import Marriage_before_HusbDeath,Marriage_before_WifeDeath,Divorce_before_HusbDeath,Divorce_before_WifeDeath
+from Matt_sprint02 import US12_US14
 from Meena_sprint1 import marriagebeforebirth, datebeforecurrent
 from Meena_sprint2_stories import isbirthbeforedeath, isGenderCorrectForRole
 
@@ -111,3 +112,4 @@ marriagebeforebirth(fam_dict,ind_dict)
 datebeforecurrent(fam_dict,ind_dict)
 isbirthbeforedeath(ind_dict) 
 isGenderCorrectForRole(ind_dict,fam_dict)
+US12_US14(fam_dict,ind_dict)
