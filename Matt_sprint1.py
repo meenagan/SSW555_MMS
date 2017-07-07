@@ -23,7 +23,7 @@ def Marriage_before_HusbDeath(fam_dict,ind_dict):
             husb_deathdate_datetime = datetime.now()
     
         if husb_deathdate_datetime < marr_date_datetime:
-            print "Error: US 05: Death date (", husb_deathdate_datetime, ") of husband", husb_id, "before marriage date (", marr_date, ")" "\n"
+            print "Error: US 05: Death date (", husb_deathdate, ") of husband", husb_id, "before marriage date (", marr_date, ")" "\n"
             return True
             
 def Marriage_before_WifeDeath(fam_dict,ind_dict):
@@ -46,7 +46,7 @@ def Marriage_before_WifeDeath(fam_dict,ind_dict):
             wife_deathdate_datetime = datetime.now()
     
         if wife_deathdate_datetime < marr_date_datetime:
-            print "Error: US 05: Death date (" , wife_deathdate_datetime, ") of wife,", wife_id, "before marriage date (", marr_date, ")" "\n"
+            print "Error: US 05: Death date (" , wife_deathdate, ") of wife,", wife_id, "before marriage date (", marr_date, ")" "\n"
             return True
                
 def Divorce_before_HusbDeath(fam_dict,ind_dict):
@@ -69,7 +69,7 @@ def Divorce_before_HusbDeath(fam_dict,ind_dict):
             husb_deathdate_datetime = datetime.now()
         
         if husb_deathdate_datetime < div_date_datetime:
-            print "Error: US 06: Death date (" , husb_deathdate_datetime, ") of husband", husb_id, "before divorce date (", div_date, ")" "\n"
+            print "Error: US 06: Death date (" , husb_deathdate, ") of husband", husb_id, "before divorce date (", div_date, ")" "\n"
             return True
     
 def Divorce_before_WifeDeath(fam_dict,ind_dict):
@@ -92,5 +92,5 @@ def Divorce_before_WifeDeath(fam_dict,ind_dict):
             wife_deathdate_datetime = datetime.now()
    
         if wife_deathdate_datetime < div_date_datetime:
-            print "Error: US 06: Death date (" , wife_deathdate_datetime, ") of wife", wife_id, "before divorce date (", div_date, ")" "\n"
+            print "Error: US 06: Death date (" , wife_deathdate, ") of wife", wife_id, "before divorce date (", div_date, ")" "\n"
             return True
