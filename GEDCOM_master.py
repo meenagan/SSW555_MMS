@@ -10,6 +10,7 @@ from Matt_sprint1 import Marriage_before_HusbDeath,Marriage_before_WifeDeath,Div
 from Matt_sprint02 import US12_US14
 from Meena_sprint1 import marriagebeforebirth, datebeforecurrent
 from Meena_sprint2_stories import isbirthbeforedeath, isGenderCorrectForRole
+from Meena_sprint3 import checkUniqueID, getAges
 
 if __name__ == "__main__":
 
@@ -121,3 +122,6 @@ US12_US14(fam_dict,ind_dict)
 
 getRecentBirths(ind_dict,date_format)
 getRecentDeaths(ind_dict,date_format)
+
+checkUniqueID(data_list)
+getAges(ind_dict)

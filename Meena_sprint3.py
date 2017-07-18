@@ -29,6 +29,7 @@ def getAges(ind_dict):
         else:
             deathdate = datetime.datetime.strptime(ind_dict[ind][5], date_format)
             ind_Ages[ind] = math.floor((deathdate - birthdate).days / 365)
+    print "The Dictionary of Ages: "
     print ind_Ages
     return ind_Ages
 
