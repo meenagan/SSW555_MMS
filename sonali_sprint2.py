@@ -52,8 +52,7 @@ def isBirthBeforeDeathofParents(ind_dict,fam_dict,date_format):
                 husbDeathDate_datetime = datetime.strptime(husbDeathDate, date_format)
                 childBirthDate_datetime = datetime.strptime(childBirthDate, date_format)
                 if relativedelta.relativedelta(childBirthDate_datetime, husbDeathDate_datetime).months > 9:
-                     print "ANOMALY: FAMILY: US09 : ", unique_id, ": child ", name, " born ", childBirthDate,
-                           " after 9 months of death of father on ", husbDeathDate
+                     print "ANOMALY: FAMILY: US09 : ", unique_id, ": child ", name, " born ", childBirthDate," after 9 months of death of father on ", husbDeathDate
 
 
 
