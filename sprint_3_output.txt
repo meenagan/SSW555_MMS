@@ -1,3 +1,4 @@
+
 +----------------------------------------------------------------------------------------------------------------------+
 ¦ ID   ¦ Name               ¦ Gender   ¦ Birthday    ¦   Age ¦ Alive   ¦ Death       ¦ Child       ¦ Spouse            ¦
 ¦------+--------------------+----------+-------------+-------+---------+-------------+-------------+-------------------¦
@@ -100,39 +101,28 @@ ANOMALY: FAMILY: US08 :  I7 : child  Anushka  born  20 APR 2002  before marriage
 ANOMALY: FAMILY: US09 :  I16 : child  Rambha  born  9 NOV 1955  after death of mother on  10 FEB 1857
 ANOMALY: FAMILY: US09 :  I2 : child  Ramesh  born  1 JUN 1958  after death of mother on  10 FEB 1857
 ANOMALY: FAMILY: US09 :  I3 : child  Sunanda  born  12 APR 1964  after 9 months of death of father on  12 MAY 1960
-Error: US 05: Death date ( Still alive ) of husband I8 before marriage date ( 28 JUN 2100 )
-
-Error: US 05: Death date ( 10 FEB 1857 ) of wife, I13 before marriage date ( 11 APR 1953 )
-
-Error: US 06: Death date ( Still alive ) of husband I18 before divorce date ( 15 JUN 2100 )
-
-Error: US 06: Death date ( Still alive ) of wife I16 before divorce date ( 15 JUN 2100 )
-
+ERROR: US 05: Death date ( Still alive ) of husband I8 before marriage date ( 28 JUN 2100 )
+ERROR: US 05: Death date ( 10 FEB 1857 ) of wife, I13 before marriage date ( 11 APR 1953 )
+ERROR: US 06: Death date ( Still alive ) of husband I18 before divorce date ( 15 JUN 2100 )
+ERROR: US 06: Death date ( Still alive ) of wife I16 before divorce date ( 15 JUN 2100 )
 ERROR: FAMILY: US02 : I14  Husband's birth date  23 MAR 2007 : after marriage date  10 AUG 1958
 ERROR: FAMILY: US01 : 28 JUN 2100 : occurs in the future
-Error: US 03: Birthdate and Deathdate for I14 are not valid. Please check the dates.
-Error: US 03: Birthdate and Deathdate for I13 are not valid. Please check the dates.
-Error: US 21: Husband Gender for I12 in family F2 is invalid.
-Error: US 21: Wife Gender for I13 in family F2 is invalid.
-Error: US 12: Father ( I12 ) more than eighty years older than child ( I16 ) 
-
-Error: US 12: Father ( I12 ) more than eighty years older than child ( I2 ) 
-
-Error: US 12: Father ( I18 ) more than eighty years older than child ( I20 ) 
-
-Error: US 12: Mother ( I16 ) more than sixty years older than child ( I20 ) 
-
-Error: US 12: Mother ( I16 ) more than sixty years older than child ( I25 ) 
-
-Error: US 14: 9 children from the following set ( set(['I28', 'I29', 'I30', 'I19', 'I33', 'I21', 'I22', 'I23', 'I24', 'I25', 'I26', 'I27', 'I35', 'I32', 'I34', 'I31']) ) born on the same date: 30 MAY 1979 (Max=5) 
-
-List of people who were born in the last 30 days
-('I25', 'Melissa')
-List of people who died in the last 30 days
-('I17', 'Kautik')
+ERROR: US 03: Birthdate and Deathdate for I14 are not valid. Please check the dates.
+ERROR: US 03: Birthdate and Deathdate for I13 are not valid. Please check the dates.
+ERROR: US 21: Husband Gender for I12 in family F2 is invalid.
+ERROR: US 21: Wife Gender for I13 in family F2 is invalid.
+ERROR: US 12: Father ( I12 ) more than eighty years older than child ( I16 ) 
+ERROR: US 12: Father ( I12 ) more than eighty years older than child ( I2 ) 
+ERROR: US 12: Father ( I18 ) more than eighty years older than child ( I20 ) 
+ERROR: US 12: Mother ( I16 ) more than sixty years older than child ( I20 ) 
+ERROR: US 12: Mother ( I16 ) more than sixty years older than child ( I25 ) 
+ERROR: US 14: 9 children from the following set ( set(['I28', 'I29', 'I30', 'I19', 'I33', 'I21', 'I22', 'I23', 'I24', 'I25', 'I26', 'I27', 'I35', 'I32', 'I34', 'I31']) ) born on the same date: 30 MAY 1979 (Max=5) 
+ERROR: US 15: There are 16 children ( set(['I28', 'I29', 'I30', 'I19', 'I33', 'I21', 'I22', 'I23', 'I24', 'I25', 'I26', 'I27', 'I35', 'I32', 'I34', 'I31']) ) in one family. (Max = 14)
+ERROR: US 25: 4 siblings with the same name and birth date ( ('Melissa /Patil/ ', '30 MAY 1979') ). (Max=1) 
 Your List of ID's is Unique!
 The Dictionary of Ages: 
 {'I28': 38.0, 'I29': 38.0, 'I20': -84.0, 'I21': 38.0, 'I22': 38.0, 'I23': 38.0, 'I24': 38.0, 'I25': 0.0, 'I26': 38.0, 'I27': 38.0, 'I9': 5.0, 'I8': 45.0, 'I1': 38.0, 'I3': 53.0, 'I2': 59.0, 'I5': 32.0, 'I4': 34.0, 'I7': 15.0, 'I6': 29.0, 'I15': 71.0, 'I14': -47.0, 'I17': 67.0, 'I16': 61.0, 'I19': 38.0, 'I18': 65.0, 'I33': 36.0, 'I32': 36.0, 'I31': 31.0, 'I30': 33.0, 'I11': 39.0, 'I10': 11.0, 'I13': -82.0, 'I12': 189.0, 'I35': 40.0, 'I34': 35.0}
-Error: US 15: There are 16 children ( set(['I28', 'I29', 'I30', 'I19', 'I33', 'I21', 'I22', 'I23', 'I24', 'I25', 'I26', 'I27', 'I35', 'I32', 'I34', 'I31']) ) in one family. (Max = 14) 
-
-Error: US 25: 4 siblings with the same name and birth date ( ('Melissa /Patil/ ', '30 MAY 1979') ). (Max=1) 
+List of people who were born in the last 30 days:
+('I25', 'Melissa')
+List of people who died in the last 30 days:
+('I17', 'Kautik')

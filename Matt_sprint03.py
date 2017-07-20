@@ -9,7 +9,7 @@ def US15(fam_dict,ind_dict):
         child_count=len(children_id)
             
         if child_count>=15:
-            print "Error: US 15: There are", child_count, "children (", children_id, ") in one family. (Max = 14) \n"
+            print "ERROR: US 15: There are", child_count, "children (", children_id, ") in one family. (Max = 14)"
             
     return True
 
@@ -33,7 +33,7 @@ def US25(fam_dict,ind_dict):
         
         for k,v in child_namebirth_common_dict.iteritems():
             if v > 3:
-                print "Error: US 25:", v, "siblings with the same name and birth date (", k, "). (Max=1) \n"
+                print "ERROR: US 25:", v, "siblings with the same name and birth date (", k, "). (Max=1) "
         
     return True
             

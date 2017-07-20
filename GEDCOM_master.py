@@ -120,12 +120,11 @@ datebeforecurrent(fam_dict,ind_dict)
 isbirthbeforedeath(ind_dict)
 isGenderCorrectForRole(ind_dict,fam_dict)
 US12_US14(fam_dict,ind_dict)
-
-getRecentBirths(ind_dict,date_format)
-getRecentDeaths(ind_dict,date_format)
+US15(fam_dict,ind_dict)
+US25(fam_dict,ind_dict)
 
 checkUniqueID(data_list)
 getAges(ind_dict)
+getRecentBirths(ind_dict,date_format)
+getRecentDeaths(ind_dict,date_format)
 
-US15(fam_dict,ind_dict)
-US25(fam_dict,ind_dict)
