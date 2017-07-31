@@ -8,6 +8,7 @@ from sonali_sprint2 import  isBirthAfterMarriage, isBirthBeforeDeathofParents
 from sonali_sprint3 import  getRecentBirths, getRecentDeaths
 from Matt_sprint1 import Marriage_before_HusbDeath,Marriage_before_WifeDeath,Divorce_before_HusbDeath,Divorce_before_WifeDeath
 from Matt_sprint02 import US12_US14
+from Matt_sprint03 import US15, US25
 from Meena_sprint1 import marriagebeforebirth, datebeforecurrent
 from Meena_sprint2_stories import isbirthbeforedeath, isGenderCorrectForRole
 from Meena_sprint3 import checkUniqueID, getAges
@@ -119,9 +120,11 @@ datebeforecurrent(fam_dict,ind_dict)
 isbirthbeforedeath(ind_dict)
 isGenderCorrectForRole(ind_dict,fam_dict)
 US12_US14(fam_dict,ind_dict)
-
-getRecentBirths(ind_dict,date_format)
-getRecentDeaths(ind_dict,date_format)
+US15(fam_dict,ind_dict)
+US25(fam_dict,ind_dict)
 
 checkUniqueID(data_list)
 getAges(ind_dict)
+getRecentBirths(ind_dict,date_format)
+getRecentDeaths(ind_dict,date_format)
+

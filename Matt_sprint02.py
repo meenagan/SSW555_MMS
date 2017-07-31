@@ -67,9 +67,9 @@ def US12_US14(fam_dict,ind_dict):
             
             
             if husb_age_diff > 80:                
-                print "Error: US 12: Father (", husb_id, ") more than eighty years older than child (", child, ") \n"   
+                print "ERROR: US 12: Father (", husb_id, ") more than eighty years older than child (", child, ") "
             if wife_age_diff > 60:
-                print "Error: US 12: Mother (", wife_id, ") more than sixty years older than child (", child, ") \n"
+                print "ERROR: US 12: Mother (", wife_id, ") more than sixty years older than child (", child, ") "
                 
                 
         #USER STORY 15: No more than five siblings should be born at the same time
@@ -77,7 +77,8 @@ def US12_US14(fam_dict,ind_dict):
         child_birthdate_common = child_birthdate_freqdist.most_common()
         child_birthdate_common_dict = dict(child_birthdate_common)
        
-        if any(value > 5 for value in child_birthdate_common_dict.itervalues()):
-            print "Error: US 14: More than five children (", children_id, ") born on the same date:", child_birthdate
+        for k,v in child_birthdate_common_dict.iteritems():
+            if v > 5:
+                print "ERROR: US 14:", v, "children from the following set (", children_id, ") born on the same date:", k, "(Max=5) "
         
     return True

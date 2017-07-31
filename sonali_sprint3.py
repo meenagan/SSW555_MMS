@@ -1,6 +1,6 @@
 from datetime import datetime
 def getRecentBirths(ind_dict,date_format):
-    print("List of people who were born in the last 30 days")
+    print("List of people who were born in the last 30 days:")
     for key in ind_dict:
         value = ind_dict[key]
         unique_id = key
@@ -13,7 +13,7 @@ def getRecentBirths(ind_dict,date_format):
                     print(unique_id, name)
 
 def getRecentDeaths(ind_dict,date_format):
-    print("List of people who died in the last 30 days")
+    print("List of people who died in the last 30 days:")
     for key in ind_dict:
         value = ind_dict[key]
         unique_id = key
