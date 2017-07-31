@@ -24,6 +24,6 @@ def checkAliveAndMarried(ind_dict, fam_dict):
 				temp_husb_name = fam_dict[fam][3]
 				temp_wife_name = fam_dict[fam][5]
 				if ind_dict[temp_husb_id][4] == 'True' and ind_dict[temp_wife_id][4] == 'True':
-					ListofAliveandMarried[counter] = temp_wife_name + "is happily married to" + temp_husb_name
+					ListofAliveandMarried[counter] = temp_wife_name + " is happily married to " + temp_husb_name
 					counter = counter + 1
 	return ListofAliveandMarried.values()
