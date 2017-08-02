@@ -13,6 +13,9 @@ from Meena_sprint1 import marriagebeforebirth, datebeforecurrent
 from Meena_sprint2_stories import isbirthbeforedeath, isGenderCorrectForRole
 from Meena_sprint3 import checkUniqueID, getAges
 from Meena_sprint4 import checkDeceased, checkAliveAndMarried
+from sonali_sprint4 import isMarriageAfter14,isLastNameSame
+
+
 
 if __name__ == "__main__":
 
@@ -50,14 +53,16 @@ if __name__ == "__main__":
                     death_date_datetime = datetime.strptime(death_date, date_format)
                     age = int((death_date_datetime - birth_date_datetime).days / 365)
                 if 'FAMC' in data_list[j]:
-                    famc_set.add(data_list[j].partition("FAMC ")[2][1:-1])
+                    famc = data_list[j]
+                    famc = famc[famc.index('@')+1:-1]
+                    #famc_set.add(data_list[j].partition("FAMC ")[2][1:-1])
                 if 'FAMS' in data_list[j]:
                     fams_set.add(data_list[j].partition("FAMS ")[2][1:-1])
-            if len(famc_set) == 0:
-                famc_set = {'NA'}
+            # if len(famc_set) == 0:
+            #     famc_set = {'NA'}
             if len(fams_set) == 0:
                 fams_set = {'NA'}
-            ind_dict[unique_id].extend((name, sex, birth_date, age, alive_flag, death_date, famc_set, fams_set))
+            ind_dict[unique_id].extend((name, sex, birth_date, age, alive_flag, death_date, famc, fams_set))
     ind_dict_sorted = OrderedDict(sorted(ind_dict.items(), key=lambda s: int(s[0][1:])))
 
 #added
@@ -123,6 +128,8 @@ isGenderCorrectForRole(ind_dict,fam_dict)
 US12_US14(fam_dict,ind_dict)
 US15(fam_dict,ind_dict)
 US25(fam_dict,ind_dict)
+isMarriageAfter14(fam_dict,ind_dict,date_format)
+isLastNameSame(fam_dict,ind_dict,date_format)
 
 checkUniqueID(data_list)
 getAges(ind_dict)
@@ -131,3 +138,4 @@ getRecentDeaths(ind_dict,date_format)
 
 checkDeceased(ind_dict)
 checkAliveAndMarried(ind_dict,fam_dict)
+

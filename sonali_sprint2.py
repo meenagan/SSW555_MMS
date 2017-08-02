@@ -9,7 +9,7 @@ def isBirthAfterMarriage(ind_dict,fam_dict,date_format):
         name = name[:name.index('/')].strip()
         birth_date = value[2]
         birth_date_datetime = datetime.strptime(birth_date, date_format)
-        family_id = value[6].pop()
+        family_id = value[6]
         if family_id is not 'NA':
             marriage_date = fam_dict[family_id][0]
             if marriage_date is not 'NA':
