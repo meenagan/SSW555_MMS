@@ -70,5 +70,5 @@ def US33(fam_dict,ind_dict):
             
             
                 if (wife_flag=='False' and husb_flag=='False' and child_age < 18):                
-                    print "US 33:", child, ":", child_name, "is an orphan." "\n"   
+                    print "\n" "US 33:", child, ":", child_name, "is an orphan." "\n"   
         
