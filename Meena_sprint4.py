@@ -10,6 +10,8 @@ def checkDeceased(ind_dict):
 		if ind_dict[ind][4] == 'False':
 			ListofDead[counter] = ind_dict[ind][0]
 			counter = counter + 1
+	print "List of People who died (US29): "
+	print ListofDead.values()
 	return ListofDead.values()
 
 #Code for user Story 30: List Living & Married
@@ -26,4 +28,6 @@ def checkAliveAndMarried(ind_dict, fam_dict):
 				if ind_dict[temp_husb_id][4] == 'True' and ind_dict[temp_wife_id][4] == 'True':
 					ListofAliveandMarried[counter] = temp_wife_name + " is happily married to " + temp_husb_name
 					counter = counter + 1
+	print "List of people alive and married (US30)"
+	print ListofAliveandMarried.values()
 	return ListofAliveandMarried.values()
